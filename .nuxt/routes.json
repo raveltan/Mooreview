@@ -1,0 +1,23 @@
+[
+  {
+    "name": "me",
+    "path": "/me",
+    "component": "/home/ravel/project/mooreview-front/pages/me.vue",
+    "chunkName": "pages/me",
+    "_name": "_40539dd7"
+  },
+  {
+    "name": "review-id",
+    "path": "/review/:id?",
+    "component": "/home/ravel/project/mooreview-front/pages/review/_id.vue",
+    "chunkName": "pages/review/_id",
+    "_name": "_5352e642"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/ravel/project/mooreview-front/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_24070363"
+  }
+]

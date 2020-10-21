@@ -184,7 +184,6 @@ export default {
         )
       } catch (e) {
         if (e) {
-          console.log(e.response)
           alert('Unable to add new review')
         }
       } finally {
