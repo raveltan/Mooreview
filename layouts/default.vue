@@ -10,12 +10,6 @@
         <a class="navbar-item" href="/">
           <h1>Mooreview</h1>
         </a>
-
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
-        </div>
       </div>
     </nav>
     <b-loading is-full-page :active="loading"></b-loading>

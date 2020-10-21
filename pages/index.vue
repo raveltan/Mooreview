@@ -93,8 +93,13 @@
               {{ props.row.Voters }}
             </span>
           </b-table-column>
-          <b-table-column label="Action" width="100">
-            <b-button type="is-small is-primary" rounded>Review</b-button>
+          <b-table-column v-slot="props" label="Action" width="100">
+            <b-button
+              type="is-small is-primary"
+              rounded
+              @click="navigate(props.row.ID)"
+              >Review</b-button
+            >
           </b-table-column>
         </b-table>
       </div>
@@ -105,7 +110,22 @@
 <script>
 export default {
   name: 'HomePage',
+  data() {
+    return {
+      data: [],
+      addMovieModal: false,
+      newMovieName: '',
+    }
+  },
+  created() {
+    this.getData()
+  },
   methods: {
+    navigate(id) {
+      this.$router.replace({
+        path: '/review/' + id,
+      })
+    },
     setLoading(data) {
       this.$store.commit('loading', data)
     },
@@ -156,16 +176,6 @@ export default {
         this.data = result
       }
     },
-  },
-  data() {
-    return {
-      data: [],
-      addMovieModal: false,
-      newMovieName: '',
-    }
-  },
-  created() {
-    this.getData()
   },
 }
 </script>
