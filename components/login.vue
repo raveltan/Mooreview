@@ -145,7 +145,14 @@ export default {
           this.$store.commit('loading', false)
         }
       }
-      this.$store.commit('auth/login', result.token, result.refresh, this.email)
+      localStorage.setItem('token', result.token)
+      localStorage.setItem('refresh', result.refresh)
+      localStorage.setItem('email', this.email)
+      this.$store.commit('auth/login', {
+        token: result.token,
+        result: result.refresh,
+        email: this.email,
+      })
     },
   },
 }

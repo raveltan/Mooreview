@@ -68,5 +68,17 @@ export default {
       return this.$store.state.auth.isLogin
     },
   },
+  created() {
+    const token = localStorage.getItem('token')
+    const refresh = localStorage.getItem('refresh')
+    const email = localStorage.getItem('email')
+    if (token && refresh && email) {
+      this.$store.commit('auth/login', {
+        token,
+        refresh,
+        email,
+      })
+    }
+  },
 }
 </script>

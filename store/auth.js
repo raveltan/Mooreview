@@ -6,10 +6,10 @@ export const state = () => ({
 })
 
 export const mutations = {
-  login(state, token, refresh, email) {
-    state.email = email
-    state.token = token
-    state.refresh = refresh
+  login(state, data) {
+    state.email = data.email
+    state.token = data.token
+    state.refresh = data.refresh
     state.isLogin = true
   },
   logout(state) {
